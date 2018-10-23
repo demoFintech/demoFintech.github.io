@@ -93,13 +93,13 @@ function startWebRTC(isOfferer) {
                     }
                 })();
             }, 0);
-            canvasOutputLocal.setAttribute("style", "display:;position:absolute;top:580;left:897;width:200;height:138;");
+            canvasOutputLocal.setAttribute("style", "display:;position:absolute;top:610;left:918;width:257;height:193;");
             canvasOutput.setAttribute("style", "display: none;");
-            remoteVideo.setAttribute("style", "width: 100%;height: auto;position: absolute;top: 0;left: 0;");
+            remoteVideo.setAttribute("style", "width: 140%;height: auto;position: absolute;top: 0;left: 0;");
             localVideo.setAttribute("style", "display: ;");
 			imgUsed.setAttribute("style", "display: ;");
             canvasOutputLocal.setAttribute("style", "display: ;");
-            hangup.setAttribute("style","position:absolute;left:500;top:700;border-radius:50px;");
+            hangup.setAttribute("style","position:absolute;left:555;top:773;border-radius:50px;");
             pc.createOffer().then(localDescCreated).catch(onError);
         }
     }else{
@@ -141,9 +141,9 @@ approve.setAttribute("style","display: none;");
 reject.setAttribute("style","display: none;");
 body.setAttribute("style","position:;");
 divVerify.setAttribute("style","display: none;");
-                remoteVideo.setAttribute("style", "width: 107%;height: auto;position: absolute;top: 0;left: 0;");
+                remoteVideo.setAttribute("style", "width: 140%;height: auto;position: absolute;top: 0;left: 0;");
                 localVideo.setAttribute("style", "display: ;");
-                canvasOutputLocal.setAttribute("style", "display:;position:absolute;top:518;left:820;width:200;height:170;");
+                canvasOutputLocal.setAttribute("style", "display:;position:absolute;top:610;left:918;width:257;height:193");
 
                 var canvasLocal = document.getElementById('canvasOutputLocal');
                 var ctxLocal = canvasLocal.getContext('2d');
@@ -175,9 +175,9 @@ approve.setAttribute("style","display: none;");
 reject.setAttribute("style","display: none;");
 body.setAttribute("style","position:;");
 divVerify.setAttribute("style","display: none;");
-                remoteVideo.setAttribute("style", "width: 107%;height: auto;position: absolute;top: 0;left: 0;");
+                remoteVideo.setAttribute("style", "width: 140%;height: auto;position: absolute;top: 0;left: 0;");
                 localVideo.setAttribute("style", "display: ;");
-                canvasOutputLocal.setAttribute("style", "display:;position:absolute;top:580;left:897;width:200;height:138;");
+                canvasOutputLocal.setAttribute("style", "display:;position:absolute;top:610;left:918;width:257;height:193");
 
                 var canvasLocal = document.getElementById('canvasOutputLocal');
                 var ctxLocal = canvasLocal.getContext('2d');
