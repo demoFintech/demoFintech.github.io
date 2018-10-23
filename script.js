@@ -276,12 +276,12 @@ function callRestApi() {
             if (x > 70) {
                 document.getElementById('percent').innerHTML = '<font color="green">' + x + '%</font>';
                 document.getElementById('verify').innerHTML = '<font color="green">Verified</font>';
-				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1015px;top: 0px;width: 184px;height: 209px;");
+				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1092px;top: 0px;width: 204px;height: 270px;");
             }else{
 				document.getElementById('percent').innerHTML = '<font color="red">' + 0 + '%</font>';
                 document.getElementById('verify').innerHTML = '<font color="red">Failed</font>';
 				//set the visibility to visible
-				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1015px;top: 0px;width: 184px;height: 209px;");
+				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1092px;top: 0px;width: 204px;height: 270px;");
 				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 218px;top: 167px;");
 			}
             }else{
@@ -289,7 +289,7 @@ function callRestApi() {
                 document.getElementById('percent').innerHTML = '<font color="red">' + "Undefined" + '</font>';
                 document.getElementById('verify').innerHTML = '<font color="red">Failed</font>';
 				//set the visibility to visible
-				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1015px;top: 0px;width: 184px;height: 209px;");
+				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1092px;top: 0px;width: 204px;height: 270px;");
 				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 218px;top: 167px;");
             }
 
