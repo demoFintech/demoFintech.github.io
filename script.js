@@ -129,7 +129,7 @@ function startWebRTC(isOfferer) {
             localVideo.setAttribute("style", "display: none;");
             setTimeout(callRestApi, 5000);
             if (!isOfferer) {
-                canvasOutput.setAttribute("style", "display:;position:absolute;top:1px;left:55px;width:950px;height:395px;");
+                canvasOutput.setAttribute("style", "display:;position:absolute;top:1px;left:55px;width:1019px;height:479px;");
             } else {
                 canvasOutput.setAttribute("style", "display: none;");
                 img1.setAttribute("style", "display: none;");
@@ -163,7 +163,7 @@ divVerify.setAttribute("style","display: none;");
         } else {
             localVideo.setAttribute("style", "display: none;");
             if (!isOfferer) {
-                canvasOutput.setAttribute("style", "display:;position:absolute;top:1px;left:55px;width:950px;height:395px;");
+                canvasOutput.setAttribute("style", "display:;position:absolute;top:1px;left:55px;width:1019px;height:479px;");
             } else {
                 canvasOutput.setAttribute("style", "display: none;");
                 img1.setAttribute("style", "display: none;");
@@ -278,7 +278,7 @@ function callRestApi() {
                 document.getElementById('verify').innerHTML = '<font color="green">Verified</font>';
 				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1015px;top: 0px;width: 184px;height: 209px;");
             }else{
-				document.getElementById('percent').innerHTML = '<font color="red">' + x + '</font>';
+				document.getElementById('percent').innerHTML = '<font color="red">' + 0 + '%</font>';
                 document.getElementById('verify').innerHTML = '<font color="red">Failed</font>';
 				//set the visibility to visible
 				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1015px;top: 0px;width: 184px;height: 209px;");
