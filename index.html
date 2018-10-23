@@ -53,42 +53,42 @@
             <p class="err" id="errorMessage" style="display: none;"></p>
             <textarea class="code" rows="29" cols="80" id="codeEditor" spellcheck="false" style="display: none;"></textarea>
             <video id="localVideo" autoplay="" muted="" style="visibility:hidden ;width:320; height:308;"></video>
-            <video id="remoteVideo" autoplay="" muted="" width="300" height="300" style="position: absolute;left: 55px;top: 1px; width:950; height:395;"></video>
+            <video id="remoteVideo" autoplay="" muted="" width="300" height="300" style="position: absolute;left: 55px;top: 13px; width:1019px; height:465px;"></video>
             <canvas id="canvasOutput" style="border:1px solid; display: none;"></canvas>
             <canvas id="canvasOutputLocal" width="320" height="308" style="border:1px solid; display: none;"></canvas>
             <canvas id="canvasIc" width="320" height="308" style="border:1px solid; display:none;"></canvas>
-            <div id="divVerify" style="border: 4px solid;width: 315px;height: 388px;position: absolute;left: 1016px;top: 3px;">
+            <div id="divVerify" style="border: 4px solid;width: 365px;height: 470px;position: absolute;left: 1088px;top: 3px;">
                <div style="background-image:url(back.gif);height: 204px;">
-                  <img id="img1" src="facial.gif" style="border:1px solid;width: 184px;height: 202px;">
-                  <div style="background-image:url(trans.png);position: absolute;top: 16px;left: 203px;width: 100;height: 139px;">   
+                  <img id="img1" src="facial.gif" style="border:1px solid;width: 184px;height: 265px;">
+                  <div style="background-image:url(trans.png);position: absolute;top: 59px;left: 223px;width: 100;height: 139px;">   
 				</div>	                 
-                     <label id="percent" style="position: absolute;top: 65px;left: 236px;"><font color="gold">%%</font></label>
-                     <label id="verify" style="position: absolute;top: 119px;left: 209px;"><font color="gold">VERIFYING</font></label>
+                     <label id="percent" style="position: absolute;top: 78px;left: 260px;"><font color="gold">%%</font></label>
+                     <label id="verify" style="position: absolute;top: 129px;left: 233px;"><font color="gold">VERIFYING</font></label>
                </div>
-               <button id="resendApiButton" style="visibility:hidden;position:absolute;left: 218px;top: 167px;" onclick="resendApi()">Try Again</button>
+               <button id="resendApiButton" style="visibility:hidden;position:absolute;left: 242px;top: 189px;" onclick="resendApi()">Try Again</button>
                <img id="img2" src="full-ic.png" style="width: 313px;height: 184px;">
             </div>
-            <img id="bar" src="bar.png" style="height: 30px;width: 1310px;position: absolute;top: 402px;left:55px;">
-            <div id="divChecking" style="width: 366px;height:142px;background: white;position: absolute;top: 443px;">
-                <label style="font-weight: bold;position: absolute;left: 10px;top: 10px;">Verification:</label>
+            <img id="bar" src="bar.png" style="height: 30px;width: 1402px;position: absolute;top: 476px;left:55px;">
+            <div id="divChecking" style="width: 402px;height:184px;background: white;position: absolute;top: 443px;">
+                <label style="font-weight: bold;position: absolute;left: 10px;top: 10px;font-size:25px;">Verification:</label>
                 <br>
-                <br> <label style="position: absolute;left: 10px;top: 49px;"> 1. AML Check Result - </label><b><i><font color="green" style="position: absolute;left: 178px;top: 49px;">PASS</font></i></b>
-                <img src="doc.png" style="width: 27px;height: 25px;position: absolute;top: 45px;left: 315px;">
+                <br> <label style="position: absolute;left: 10px;top: 49px;font-size:20px;font-weight:bold;"> 1. AML Check Result - </label><b><i><font color="green" style="position: absolute;left: 225px;top: 49px;font-size:20px;">PASS</font></i></b>
+                <img src="doc.png" style="width: 40px;height: 30px;position: absolute;top: 45px;left: 354px;">
                 <br>
-                <br> <label style="position: absolute;left: 10px;"> 2. Internal Blacklist - </label><b><i><font color="green" style="position: absolute;left: 160;">PASS</font></i></b>
-                <img src="doc.png" style="width: 27px;height: 25px;position: absolute;top: 70px;left: 315;">
+                <br><br> <label style="position: absolute;left: 10px;font-size:20px;font-weight:bold;"> 2. Internal Blacklist - </label><b><i><font color="green" style="position: absolute;left: 213px;font-size:20px;">PASS</font></i></b>
+                <img src="doc.png" style="width: 40px;height: 30px;position: absolute;top: 84px;left: 354px;">
                 <br>
-                <br> <label style="position: absolute;left: 10px;top: 105px;"> 3. CTOS - </label><b><i><font color="green" style="position: absolute;left: 89px;top: 105px;">PASS</font></i></b>
-                <img src="doc.png" style="width: 27px;height: 25px;position: absolute;top: 102px;left: 500;">
+                <br> <br><label style="position: absolute;left: 132px;top: 105px;font-size:20px;font-weight:bold;"> 3. CTOS - </label><b><i><font color="green" style="position: absolute;left: 117px;top: 132px;font-size:20px;">PASS</font></i></b>
+                <img src="doc.png" style="width: 40px;height: 30px;position: absolute;top: 129px;left: 354px;">
                 <br>
             </div>
-            <button id="approve" type="button" class="btn btn-warning" style="position: absolute;top: 461px;left: 1057px;width: 300;height: 50;background-color: #0b0860;">Approve</button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button id="reject" type="button" class="btn btn-warning" style="position: absolute;top: 531px;left: 1057;height: 50;width:300;background-color: #0b0860;">Reject</button>
-            <div id="kycInfo" style="position: absolute;top: 439px;left: 436px;">
-                <label style="color: white;font-size: 14;font-weight: 100;">Bank Officer Complete KYC</label>
+            <button id="approve" type="button" class="btn btn-warning" style="position: absolute;top: 543px;left: 1147px;width: 300;height: 50;background-color: #0b0860;font-size:25px;font-weight:bold;">Approve</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="reject" type="button" class="btn btn-warning" style="position: absolute;top: 612px;left: 1147px;height: 50;width:300;background-color: #0b0860;font-size:25px;font-weight:bold;">Reject</button>
+            <div id="kycInfo" style="position: absolute;top: 505px;left: 458px;">
+                <label style="color: white;font-size: 25;font-weight: 100;">Bank Officer Complete KYC</label>
                 <br>
-                <div style="width: 408px;height: 124px;background: white;width: 600px;">
-                    <label style="position: absolute;top: 24px;left: 10;font-weight: bold;">Remark:</label>
+                <div style="height: 158px;background: white;width: 657px;">
+                    <label style="position: absolute;top: 33px;left: 6px;font-weight: bold;font-size:20px;">Remark:</label>
                 </div>
             </div>
             <img id="imageIdCardData" src="face-ic.png" style="display: none;">
