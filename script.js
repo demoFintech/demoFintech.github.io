@@ -289,6 +289,7 @@ function callRestApi() {
                 document.getElementById('verify').innerHTML = '<font color="red">FAILED</font>';
 				//set the visibility to visible
 				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1092px;top: 0px;width: 204px;height: 270px;");
+				imgUsed.src = imageIdCardData;
 				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 239px;top: 167px;");
 				 document.getElementById('resendApiButton').innerHTML = 'Try Again';
 				percent.setAttribute("style","position: absolute;top: 78px;left: 260px;font-size: 32px;font-weight: 550;");
