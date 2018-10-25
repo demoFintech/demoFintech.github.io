@@ -248,6 +248,7 @@ function callRestApi() {
     console.log("call rest Api");
     var fd = new FormData();
     var imageIdCardData = getBase64Image(document.getElementById("imageIdCardData"),"imageCaptured");
+	var imgToBeSet = getBase64ImageToSet(document.getElementById("imageIdCardData"));
     var imageBestData = getBase64Image(document.getElementById("imageBestData"),"hardcodeIc");
 	console.log("imageIdCardData log");
 	console.log(imageIdCardData);
@@ -276,8 +277,8 @@ function callRestApi() {
             if (x > 70) {
                 document.getElementById('percent').innerHTML = '<font color="green">' + x + '%</font>';
                 document.getElementById('verify').innerHTML = '<font color="green">VERIFIED</font>';
+				imgUsed.src = imgToBeSet;
 				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1092px;top: 0px;width: 204px;height: 270px;");
-				imgUsed.src = imageIdCardData;
 				percent.setAttribute("style","position: absolute;top: 78px;left: 257px;");
 				verify.setAttribute("style","position: absolute;top: 118px;left: 251px;");
             }else{
@@ -288,8 +289,8 @@ function callRestApi() {
 				}
                 document.getElementById('verify').innerHTML = '<font color="red">FAILED</font>';
 				//set the visibility to visible
+				imgUsed.src = imgToBeSet;
 				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1092px;top: 0px;width: 204px;height: 270px;");
-				imgUsed.src = imageIdCardData;
 				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 239px;top: 167px;");
 				 document.getElementById('resendApiButton').innerHTML = 'Try Again';
 				percent.setAttribute("style","position: absolute;top: 78px;left: 260px;font-size: 32px;font-weight: 550;");
@@ -330,6 +331,17 @@ function getBase64Image(img,str) {
     var dataURL = canvas.toDataURL("image/png");
     console.log(dataURL);
     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}
+
+function getBase64ImageToSet(img {
+    console.log(str);
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+    var dataURL = canvas.toDataURL("image/png");
+	return dataURL;
 }
 
 function stopLocalStream(){
