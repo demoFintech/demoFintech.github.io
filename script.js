@@ -275,6 +275,7 @@ function callRestApi() {
                 document.getElementById('percent').innerHTML = '<font color="green">' + x + '%</font>';
                 document.getElementById('verify').innerHTML = '<font color="green">VERIFIED</font>';
 				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1092px;top: 0px;width: 204px;height: 270px;");
+				//imgUsed.src = canvas.toDataURL("image/png");
 				percent.setAttribute("style","position: absolute;top: 78px;left: 257px;");
 				verify.setAttribute("style","position: absolute;top: 118px;left: 251px;");
             }else{
