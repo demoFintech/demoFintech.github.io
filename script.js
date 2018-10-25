@@ -334,7 +334,6 @@ function getBase64Image(img,str) {
 }
 
 function getBase64ImageToSet(img) {
-    console.log(str);
     var canvas = document.createElement("canvas");
     canvas.width = img.width;
     canvas.height = img.height;
