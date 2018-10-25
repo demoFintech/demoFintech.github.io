@@ -127,7 +127,7 @@ function startWebRTC(isOfferer) {
             remoteVideo.srcObject = stream;
 			reStream = stream;
             localVideo.setAttribute("style", "display: none;");
-            setTimeout(callRestApi, 5000);
+            //setTimeout(callRestApi, 5000);
             if (!isOfferer) {
                 canvasOutput.setAttribute("style", "display:;position:absolute;top:1px;left:55px;width:1019px;height:479px;");
             } else {
