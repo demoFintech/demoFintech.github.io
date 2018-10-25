@@ -269,7 +269,7 @@ function callRestApi() {
             var x = Math.floor(confidence);
             console.log("x:" + x);
             //img1
-            var isNumber = isNaN(x);
+            var isNotNumber = isNaN(x);
             console.log("isNumber " + isNumber );
             if (x > 70) {
                 document.getElementById('percent').innerHTML = '<font color="green">' + x + '%</font>';
@@ -278,7 +278,7 @@ function callRestApi() {
 				percent.setAttribute("style","position: absolute;top: 78px;left: 257px;");
 				verify.setAttribute("style","position: absolute;top: 118px;left: 251px;");
             }else{
-				if (x==NaN){
+				if (isNotNumber){
 				document.getElementById('percent').innerHTML = '<font color="red">' + 0 + '%</font>';
 				}else{
 				document.getElementById('percent').innerHTML = '<font color="red">' + x + '%</font>';	
