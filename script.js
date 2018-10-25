@@ -249,6 +249,8 @@ function callRestApi() {
     var fd = new FormData();
     var imageIdCardData = getBase64Image(document.getElementById("imageIdCardData"),"imageCaptured");
     var imageBestData = getBase64Image(document.getElementById("imageBestData"),"hardcodeIc");
+	console.log("imageIdCardData log");
+	console.log(imageIdCardData);
     fd.append("apiKey", "bZz35LDHntq4DvEQ3Ha8jvH8BTk3qsLr");
     fd.append("imageIdCard", base64ImageToBlob(imageIdCardData));
     fd.append("imageBest", base64ImageToBlob(imageBestData));
