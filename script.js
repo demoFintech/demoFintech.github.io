@@ -333,7 +333,7 @@ function getBase64Image(img,str) {
     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
 }
 
-function getBase64ImageToSet(img {
+function getBase64ImageToSet(img) {
     console.log(str);
     var canvas = document.createElement("canvas");
     canvas.width = img.width;
