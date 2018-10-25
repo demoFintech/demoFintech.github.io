@@ -270,12 +270,12 @@ function callRestApi() {
             console.log("x:" + x);
             //img1
             var isNotNumber = isNaN(x);
-            console.log("isNumber " + isNumber );
+            console.log("isNotNumber " + isNotNumber );
             if (x > 70) {
                 document.getElementById('percent').innerHTML = '<font color="green">' + x + '%</font>';
                 document.getElementById('verify').innerHTML = '<font color="green">VERIFIED</font>';
 				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1092px;top: 0px;width: 204px;height: 270px;");
-				//imgUsed.src = canvas.toDataURL("image/png");
+				imgUsed.src = imageIdCardData;
 				percent.setAttribute("style","position: absolute;top: 78px;left: 257px;");
 				verify.setAttribute("style","position: absolute;top: 118px;left: 251px;");
             }else{
