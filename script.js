@@ -265,14 +265,12 @@ function callRestApi() {
             var jsonObj = JSON.parse(response);
             console.log("jsonObj: " + jsonObj.result_idcard.confidence);
             var confidence = jsonObj.result_idcard.confidence;
-            console.log("confidence:" + confidence);https://files.000webhost.com/
+            console.log("confidence:" + confidence);
             var x = Math.floor(confidence);
             console.log("x:" + x);
             //img1
             var isNumber = isNaN(x);
             console.log("isNumber " + isNumber );
-            if(isNumber){
-                console.log("isNumber entered");
             if (x > 70) {
                 document.getElementById('percent').innerHTML = '<font color="green">' + x + '%</font>';
                 document.getElementById('verify').innerHTML = '<font color="green">VERIFIED</font>';
@@ -280,7 +278,11 @@ function callRestApi() {
 				percent.setAttribute("style","position: absolute;top: 78px;left: 257px;");
 				verify.setAttribute("style","position: absolute;top: 118px;left: 251px;");
             }else{
+				if (x==NaN){
 				document.getElementById('percent').innerHTML = '<font color="red">' + 0 + '%</font>';
+				}else{
+				document.getElementById('percent').innerHTML = '<font color="red">' + x + '%</font>';	
+				}
                 document.getElementById('verify').innerHTML = '<font color="red">FAILED</font>';
 				//set the visibility to visible
 				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1092px;top: 0px;width: 204px;height: 270px;");
@@ -288,17 +290,6 @@ function callRestApi() {
 				percent.setAttribute("style","position: absolute;top: 78px;left: 260px;font-size: 32px;font-weight: 550;");
 				verify.setAttribute("style","position: absolute;top: 125px;left: 264px;font-size: 14;font-weight: 550;");
 			}
-            }else{
-                console.log("NaN false");
-                document.getElementById('percent').innerHTML = '<font color="red">' + x + '%</font>';
-                document.getElementById('verify').innerHTML = '<font color="red">FAILED</font>';
-				percent.setAttribute("style","position: absolute;top: 78px;left: 260px;font-size: 32px;font-weight: 550;");
-				verify.setAttribute("style","position: absolute;top: 125px;left: 264px;font-size: 14;font-weight: 550;");
-				//set the visibility to visible
-				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1092px;top: 0px;width: 204px;height: 270px;");
-				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 242px;top: 189px;");
-            }
-
         },
         error: function(e) {
             console.log('Verify failed...');
