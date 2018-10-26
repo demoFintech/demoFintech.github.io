@@ -256,10 +256,12 @@ function callRestApi() {
     var fd = new FormData();
     var imageIdCardData = getBase64Image(document.getElementById("imageIdCardData"),"imageCaptured");
 	var imgToBeSet = getBase64ImageToSet(document.getElementById("imageIdCardData"));
-    var imageBestData = getBase64Image(document.getElementById("imageBestData1"),"hardcodeIc");
+    var imageBestData = getBase64Image(imageBestData1.src,"hardcodeIc");
+	var blob = returnLala(imageBestData1.src);
     fd.append("apiKey", "bZz35LDHntq4DvEQ3Ha8jvH8BTk3qsLr");
     fd.append("imageIdCard", base64ImageToBlob(imageIdCardData));
-    fd.append("imageBest", base64ImageToBlob1(imageBestData));
+    //fd.append("imageBest", base64ImageToBlob1(imageBestData));
+	fd.append("imageBest", blob);
     $.ajax({
         url: "https://demo.faceid.asia/api/faceid/v1/verify",
         type: "POST",
@@ -307,6 +309,12 @@ function callRestApi() {
         },
         complete: function() {}
     })
+}
+
+function returnLala(str){
+	console.log("return lala");
+	    console.log(str);
+    return str.replace(/^data:image\/(png|jpg);base64,/, "");
 }
 
 function base64ImageToBlob(str) {
