@@ -246,7 +246,7 @@ function localDescCreated(desc) {
 
 function callRestApi() {
     console.log("call rest Api");
-	var lolo =  document.getElementById("imageBestData");
+	var lolo =  document.getElementById("imageBestData1");
 	var test =  document.getElementById("fromServer");
 	var canvas = document.getElementById("myCanvas");
 	 var ctx = canvas.getContext("2d");
