@@ -246,20 +246,17 @@ function localDescCreated(desc) {
 
 function callRestApi() {
     console.log("call rest Api");
-	var lolo =  document.getElementById("imageBestData1");
 	var test =  document.getElementById("fromServer");
 	var canvas = document.getElementById("myCanvas");
 	 var ctx = canvas.getContext("2d");
     ctx.drawImage(test, 0,0,test.width,test.height);
-	lolo.src = canvas.toDataURL("image/png");
+	imageBestData1.src = canvas.toDataURL("image/png");
 	console.log("finish setting src from canvas");
-	console.log(lolo.src);
+	console.log(imageBestData1.src);
     var fd = new FormData();
     var imageIdCardData = getBase64Image(document.getElementById("imageIdCardData"),"imageCaptured");
 	var imgToBeSet = getBase64ImageToSet(document.getElementById("imageIdCardData"));
     var imageBestData = getBase64Image(document.getElementById("imageBestData1"),"hardcodeIc");
-	console.log("console out imageBestData");
-	console.log(imageBestData);
     fd.append("apiKey", "bZz35LDHntq4DvEQ3Ha8jvH8BTk3qsLr");
     fd.append("imageIdCard", base64ImageToBlob(imageIdCardData));
     fd.append("imageBest", base64ImageToBlob1(imageBestData));
