@@ -280,7 +280,7 @@ function callRestApi() {
 				document.getElementById('resendApiButton').innerHTML = x + "%  VERIFIED";
 				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 224px;background-color: white;color:#0b0860;font-weight:bold");
 				imgUsed.src = imgToBeSet;
-				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 85px;top: -4px;width: 185px;height: 266px;");
+				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 0px;top: -4px;width: 365px;height: 266px;");
 				//percent.setAttribute("style","position: absolute;top: 78px;left: 257px;");
 				//verify.setAttribute("style","position: absolute;top: 118px;left: 251px;");
 				verify.setAttribute("style","position: absolute;top: 111px;left: 138px;font-size: 14;font-weight: 550; visibility:hidden;");
@@ -301,7 +301,7 @@ function callRestApi() {
 				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 224px;background-color: white;color:red;font-weight:bold");
 				tryAgain.setAttribute("style","position:absolute;top:231px;left:278px;color:red;visibility:visible");
 				imgUsed.src = imgToBeSet;
-				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 85px;top: -4px;width: 185px;height: 266px;");
+				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 0px;top: -4px;width: 365px;height: 266px;");
 				//resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 236px;top: 189px;background-color: white;color:#0b0860;font-weight:bold;");
 				//percent.setAttribute("style","position: absolute;top: 78px;left: 260px;font-size: 32px;font-weight: 550;");
 				//verify.setAttribute("style","position: absolute;top: 125px;left: 264px;font-size: 14;font-weight: 550;");
