@@ -246,15 +246,20 @@ function localDescCreated(desc) {
 
 function callRestApi() {
     console.log("call rest Api");
+	var test =  document.getElementById("fromServer");
+	var canvas = document.getElementById("myCanvas");
+	 var ctx = canvas.getContext("2d");
+    ctx.drawImage(test, 0,0,test.width,test.height);
+	imageBestData1.src = canvas.toDataURL("image/png");
+	console.log("finish setting src from canvas");
+	console.log(imageBestData1.src);
     var fd = new FormData();
     var imageIdCardData = getBase64Image(document.getElementById("imageIdCardData"),"imageCaptured");
 	var imgToBeSet = getBase64ImageToSet(document.getElementById("imageIdCardData"));
-    var imageBestData = getBase64Image(document.getElementById("imageBestData"),"hardcodeIc");
-	console.log("imageIdCardData log");
-	console.log(imageIdCardData);
+    var imageBestData = getBase64Image(document.getElementById("imageBestData1"),"hardcodeIc");
     fd.append("apiKey", "bZz35LDHntq4DvEQ3Ha8jvH8BTk3qsLr");
     fd.append("imageIdCard", base64ImageToBlob(imageIdCardData));
-    fd.append("imageBest", base64ImageToBlob(imageBestData));
+    fd.append("imageBest", base64ImageToBlob1(imageBestData));
     console.log(base64ImageToBlob(imageBestData));
     $.ajax({
         url: "https://demo.faceid.asia/api/faceid/v1/verify",
@@ -306,6 +311,25 @@ function callRestApi() {
 }
 
 function base64ImageToBlob(str) {
+    // decode base64
+    var imageContent = atob(str);
+    // create an ArrayBuffer and a view (as unsigned 8-bit)
+    var buffer = new ArrayBuffer(imageContent.length);
+    var view = new Uint8Array(buffer);
+    // fill the view, using the decoded base64
+    for (var n = 0; n < imageContent.length; n++) {
+        view[n] = imageContent.charCodeAt(n);
+    }
+    // convert ArrayBuffer to Blob
+    var blob = new Blob([buffer], {
+        0: 0
+    });
+    return blob;
+}
+
+function base64ImageToBlob1(str) {
+	console.log("to blob");
+	console.log(str);
     // decode base64
     var imageContent = atob(str);
     // create an ArrayBuffer and a view (as unsigned 8-bit)
