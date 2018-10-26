@@ -5,13 +5,11 @@ if (!location.hash) {
 }
 //const roomHash = location.hash.substring(1);
 const roomHash = 'demoFintech';
-console.log(roomHash);
 
 // TODO: Replace with your own channel ID
 const drone = new ScaleDrone('yiS12Ts5RdNhebyM');
 // Room name needs to be prefixed with 'observable-'
 const roomName = 'observable-' + roomHash;
-console.log(roomName);
 const configuration = {
     iceServers: [{
         urls: 'stun:stun.l.google.com:19302'
@@ -29,7 +27,6 @@ function onError(error) {
 };
 
 drone.on('open', error => {
-    console.log("opening drone");
     if (error) {
         return console.error(error);
     }
@@ -42,7 +39,6 @@ drone.on('open', error => {
     // We're connected to the room and received an array of 'members'
     // connected to the room (including us). Signaling server is ready.
     room.on('members', members => {
-        console.log("member connecting");
         console.log('MEMBERS', members);
         // If we are the second user to connect to the room we will be creating the offer
         const isOfferer = members.length === 2;
@@ -60,14 +56,12 @@ function sendMessage(message) {
 }
 
 function startWebRTC(isOfferer) {
-    console.log("webrtc starting");
     console.log("webrtc starting isOfferer? :" + isOfferer);
     pc = new RTCPeerConnection(configuration);
 
     // 'onicecandidate' notifies us whenever an ICE agent needs to deliver a
     // message to the other peer through the signaling server
     pc.onicecandidate = event => {
-        console.log("pc.onicecandidate");
         if (event.candidate) {
             sendMessage({
                 'candidate': event.candidate
@@ -251,18 +245,14 @@ function callRestApi() {
 	 var ctx = canvas.getContext("2d");
     ctx.drawImage(test, 0,0,test.width,test.height);
 	imageBestData1.src = canvas.toDataURL("image/png");
-	console.log("finish setting src from canvas");
-	console.log(imageBestData1.src);
     var fd = new FormData();
     var imageIdCardData = getBase64Image(document.getElementById("imageIdCardData"),"imageCaptured");
 	var imgToBeSet = getBase64ImageToSet(document.getElementById("imageIdCardData"));
-    //var imageBestData = getBase64Image(imageBestData1.src,"hardcodeIc");
-	var blob = returnLala(imageBestData1.src);
+	var blob = returnBlob(imageBestData1.src);
 	var lala = base64ImageToBlob1(blob);
     fd.append("apiKey", "bZz35LDHntq4DvEQ3Ha8jvH8BTk3qsLr");
-    fd.append("imageIdCard", base64ImageToBlob(imageIdCardData));
-    //fd.append("imageBest", base64ImageToBlob1(imageBestData));
-	fd.append("imageBest", lala);
+    fd.append("imageBest", base64ImageToBlob(imageIdCardData));
+	fd.append("imageIdCard", lala);
     $.ajax({
         url: "https://demo.faceid.asia/api/faceid/v1/verify",
         type: "POST",
@@ -312,9 +302,8 @@ function callRestApi() {
     })
 }
 
-function returnLala(str){
-	console.log("return lala");
-	    console.log(str);
+function returnBlob(str){
+	console.log("return blob");
     return str.replace(/^data:image\/(png|jpg);base64,/, "");
 }
 
@@ -336,8 +325,6 @@ function base64ImageToBlob(str) {
 }
 
 function base64ImageToBlob1(str) {
-	console.log("to blob");
-	console.log(str);
     // decode base64
     var imageContent = atob(str);
     // create an ArrayBuffer and a view (as unsigned 8-bit)
@@ -355,14 +342,12 @@ function base64ImageToBlob1(str) {
 }
 
 function getBase64Image(img,str) {
-    console.log(str);
     var canvas = document.createElement("canvas");
     canvas.width = img.width;
     canvas.height = img.height;
     var ctx = canvas.getContext("2d");
     ctx.drawImage(img, 0, 0);
     var dataURL = canvas.toDataURL("image/png");
-    console.log(dataURL);
     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
 }
 
@@ -378,14 +363,6 @@ function getBase64ImageToSet(img) {
 
 function stopLocalStream(){
 					console.log("stop local stream");
-					//console.log(myStream);
-					//pc.removeStream(myStream);
-					//pc.removeStream(reStream);
-					//pc.close();
-					//var local = document.getElementById("localVideo");
-					//video.pause();
-					//video.srcObject = null;
-					//console.log(myStream);
 					console.log("before");
 					console.log(pc);
 					var remoteVideo = document.getElementById("remoteVideo");
