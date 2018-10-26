@@ -240,6 +240,9 @@ function localDescCreated(desc) {
 
 function callRestApi() {
     console.log("call rest Api");
+	resendApiButton.setAttribute("style","visibility:hidden");
+	tryAgain.setAttribute("style","visibility:hidden");
+	verify.setAttribute("style","position: absolute;top: 111px;left: 138px;font-size: 14;font-weight: 550; visibility:visible;");
 	var test =  document.getElementById("fromServer");
 	var canvas = document.getElementById("myCanvas");
 	 var ctx = canvas.getContext("2d");
@@ -272,27 +275,33 @@ function callRestApi() {
             var isNotNumber = isNaN(x);
             console.log("isNotNumber " + isNotNumber );
             if (x > 70) {
-                document.getElementById('percent').innerHTML = '<font color="green">' + x + '%</font>';
-                document.getElementById('verify').innerHTML = '<font color="green">VERIFIED</font>';
-				resendApiButton.setAttribute("style","visibility:hidden");
+                //document.getElementById('percent').innerHTML = '<font color="green">' + x + '%</font>';
+                //document.getElementById('verify').innerHTML = '<font color="green">VERIFIED</font>';
+				document.getElementById('resendApiButton').innerHTML = x + "%  VERIFIED";
+				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 224px;background-color: white;color:#0b0860;font-weight:bold");
 				imgUsed.src = imgToBeSet;
-				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1092px;top: 0px;width: 204px;height: 270px;");
-				percent.setAttribute("style","position: absolute;top: 78px;left: 257px;");
-				verify.setAttribute("style","position: absolute;top: 118px;left: 251px;");
+				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 85px;top: -4px;width: 185px;height: 266px;");
+				//percent.setAttribute("style","position: absolute;top: 78px;left: 257px;");
+				//verify.setAttribute("style","position: absolute;top: 118px;left: 251px;");
+				verify.setAttribute("style","position: absolute;top: 111px;left: 138px;font-size: 14;font-weight: 550; visibility:hidden;");
             }else{
-				if (isNotNumber){
-				document.getElementById('percent').innerHTML = '<font color="red">' + 0 + '%</font>';
-				}else{
-				document.getElementById('percent').innerHTML = '<font color="red">' + x + '%</font>';	
-				}
-                document.getElementById('verify').innerHTML = '<font color="red">FAILED</font>';
+				//if (isNotNumber){
+				//document.getElementById('percent').innerHTML = '<font color="red">' + 0 + '%</font>';
+				//}else{
+				//document.getElementById('percent').innerHTML = '<font color="red">' + x + '%</font>';	
+				//}
+                //document.getElementById('verify').innerHTML = '<font color="red">FAILED</font>';
 				//set the visibility to visible
+				document.getElementById('resendApiButton').innerHTML = x + "%  FAILED"
+				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 224px;background-color: white;color:#0b0860;font-weight:bold");
+				tryAgain.setAttribute("style","position:absolute;top:231px;left:256px;color:red;visibility:hidden");
 				imgUsed.src = imgToBeSet;
-				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 1092px;top: 0px;width: 204px;height: 270px;");
-				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 236px;top: 189px;background-color: white;color:#0b0860;font-weight:bold;");
+				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 85px;top: -4px;width: 185px;height: 266px;");
+				//resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 236px;top: 189px;background-color: white;color:#0b0860;font-weight:bold;");
 				 document.getElementById('resendApiButton').innerHTML = 'Try Again';
-				percent.setAttribute("style","position: absolute;top: 78px;left: 260px;font-size: 32px;font-weight: 550;");
-				verify.setAttribute("style","position: absolute;top: 125px;left: 264px;font-size: 14;font-weight: 550;");
+				//percent.setAttribute("style","position: absolute;top: 78px;left: 260px;font-size: 32px;font-weight: 550;");
+				//verify.setAttribute("style","position: absolute;top: 125px;left: 264px;font-size: 14;font-weight: 550;");
+				verify.setAttribute("style","position: absolute;top: 111px;left: 138px;font-size: 14;font-weight: 550; visibility:hidden;");
 			}
         },
         error: function(e) {
