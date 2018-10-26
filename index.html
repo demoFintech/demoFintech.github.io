@@ -109,7 +109,6 @@
          let cap = new cv.VideoCapture(video);
          let faces = new cv.RectVector();
          let classifier = new cv.CascadeClassifier();
-         console.log("classifier: " + classifier);
          
          // load pre-trained classifiers
          let check = classifier.load('\haarcascade_frontalface_default.xml');

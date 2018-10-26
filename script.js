@@ -292,13 +292,17 @@ function callRestApi() {
 				//}
                 //document.getElementById('verify').innerHTML = '<font color="red">FAILED</font>';
 				//set the visibility to visible
-				document.getElementById('resendApiButton').innerHTML = x + "%  FAILED"
-				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 224px;background-color: white;color:#0b0860;font-weight:bold");
-				tryAgain.setAttribute("style","position:absolute;top:231px;left:256px;color:red;visibility:hidden");
+				if(isNotNumber){
+					document.getElementById('resendApiButton').innerHTML = "0%  FAILED"
+				}else{
+					document.getElementById('resendApiButton').innerHTML = x + "%  FAILED"
+				}
+				//document.getElementById('resendApiButton').innerHTML = x + "%  FAILED"
+				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 224px;background-color: white;color:red;font-weight:bold");
+				tryAgain.setAttribute("style","position:absolute;top:231px;left:278px;color:red;visibility:visible");
 				imgUsed.src = imgToBeSet;
 				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 85px;top: -4px;width: 185px;height: 266px;");
 				//resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 236px;top: 189px;background-color: white;color:#0b0860;font-weight:bold;");
-				 document.getElementById('resendApiButton').innerHTML = 'Try Again';
 				//percent.setAttribute("style","position: absolute;top: 78px;left: 260px;font-size: 32px;font-weight: 550;");
 				//verify.setAttribute("style","position: absolute;top: 125px;left: 264px;font-size: 14;font-weight: 550;");
 				verify.setAttribute("style","position: absolute;top: 111px;left: 138px;font-size: 14;font-weight: 550; visibility:hidden;");
