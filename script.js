@@ -246,21 +246,23 @@ function localDescCreated(desc) {
 
 function callRestApi() {
     console.log("call rest Api");
+	var lolo =  document.getElementById("imageBestData");
 	var test =  document.getElementById("fromServer");
 	var canvas = document.getElementById("myCanvas");
 	 var ctx = canvas.getContext("2d");
     ctx.drawImage(test, 0,0,test.width,test.height);
-	imageBestData1.src = canvas.toDataURL("image/png");
+	lolo.src = canvas.toDataURL("image/png");
 	console.log("finish setting src from canvas");
-	console.log(imageBestData1.src);
+	console.log(lolo.src);
     var fd = new FormData();
     var imageIdCardData = getBase64Image(document.getElementById("imageIdCardData"),"imageCaptured");
 	var imgToBeSet = getBase64ImageToSet(document.getElementById("imageIdCardData"));
     var imageBestData = getBase64Image(document.getElementById("imageBestData1"),"hardcodeIc");
+	console.log("console out imageBestData");
+	console.log(imageBestData);
     fd.append("apiKey", "bZz35LDHntq4DvEQ3Ha8jvH8BTk3qsLr");
     fd.append("imageIdCard", base64ImageToBlob(imageIdCardData));
     fd.append("imageBest", base64ImageToBlob1(imageBestData));
-    console.log(base64ImageToBlob(imageBestData));
     $.ajax({
         url: "https://demo.faceid.asia/api/faceid/v1/verify",
         type: "POST",
