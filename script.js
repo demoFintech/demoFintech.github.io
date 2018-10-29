@@ -415,7 +415,7 @@ function stopLocalStream(){
 				if(pc.iceConnectionState != null)		
 					console.log(pc.iceConnectionState);
 					if(pc.iceConnectionState == "disconnected"){
-						console.log("sudah disconnected");
+						console.log("already disconnected");
 remoteVideo.setAttribute("style","visibility:hidden;");
 canvasOutputLocal.setAttribute("style","visibility:hidden;");
 localVideo.setAttribute("style","visibility:hidden;");
@@ -423,7 +423,7 @@ imgUsed.setAttribute("style","visibility:hidden;");
 hangup.setAttribute("style","visibility:hidden;");
 }
 			if(pc.iceConnectionState == null)
-						console.log("sudah null");
+						console.log("already null");
                     }, 1000);
 				
 				
