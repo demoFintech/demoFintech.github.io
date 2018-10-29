@@ -240,8 +240,8 @@ function localDescCreated(desc) {
 
 function callRestApi() {
     console.log("call rest Api");
-	resendApiButton.setAttribute("style","visibility:hidden");
-	tryAgain.setAttribute("style","visibility:hidden");
+	resendApiButton.setAttribute("style","visibility:hidden;position:absolute;left: 110px;top: 224px;background-color: white;color:#0b0860;font-weight:bold");
+	tryAgain.setAttribute("style","position:absolute;top:231px;left:256px;color:red;visibility:hidden");
 	verify.setAttribute("style","position: absolute;top: 111px;left: 138px;font-size: 14;font-weight: 550; visibility:visible;");
 	var test =  document.getElementById("fromServer");
 	var canvas = document.getElementById("myCanvas");
@@ -298,8 +298,8 @@ function callRestApi() {
 					document.getElementById('resendApiButton').innerHTML = x + "%  FAILED"
 				}
 				//document.getElementById('resendApiButton').innerHTML = x + "%  FAILED"
-				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 224px;background-color: white;color:red;font-weight:bold");
-				tryAgain.setAttribute("style","position:absolute;top:231px;left:278px;color:red;visibility:visible");
+				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 224px;background-color: white;color:#0b0860;font-weight:bold");
+				tryAgain.setAttribute("style","position:absolute;top:231px;left:256px;color:red;visibility:visible");
 				imgUsed.src = imgToBeSet;
 				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 0px;top: -4px;width: 365px;height: 266px;");
 				//resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 236px;top: 189px;background-color: white;color:#0b0860;font-weight:bold;");
