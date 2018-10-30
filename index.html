@@ -57,17 +57,17 @@
             <canvas id="canvasOutput" style="border:1px solid; display: none;"></canvas>
             <canvas id="canvasOutputLocal" width="320" height="308" style="border:1px solid; display: none;"></canvas>
             <canvas id="canvasIc" width="320" height="308" style="border:1px solid; display:none;"></canvas>
-            <div id="divVerify" style="border: 4px solid;width: 365px;height: 470px;position: absolute;left: 1088px;top: 3px;">
+            <div id="divVerify" style="border: 4px solid;width: 365px;height: 240px;position: absolute;left: 1088px;top: 3px;border-color: white;">
                <div style="height: 265px;">
-                  <img id="img1" src="facial.gif" style="border:1px solid;width: 184px;height: 241px;position:absolute;left:85px;top:-10px;"> 
-					<img id="imgUsed" src="face-ic.png" style="visibility: hidden;position: absolute;left: 0px;top: -4px;width: 365px;height: 266px;">
+                  <img id="img1" src="facial.gif" style="border:1px solid;width: 184px;height: 236px;position:absolute;left:85px;top:0px;"> 
+					<img id="imgUsed" src="face-ic.png" style="visibility: hidden;position: absolute;left: 0px;top: 0px;width: 365px;height: 240px;">
                      <label id="percent" style="position: absolute;top: 78px;left: 260px;"><font color="white"></font></label>
                      <label id="verify" style="position: absolute;top: 159px;left: 241px;font-size: 14;font-weight: 550;visibility:hidden;"><font color="white">VERIFYING</font></label>
                </div>
-			   <button id="resendApiButton" onclick="callRestApi()" type="button" class="btn btn-warning" style="visibility:visible;position:absolute;left: 110px;top: 224px;background-color: white;color:#0b0860;font-weight:bold">Press to verify</button>
-			   <a href="#" id="tryAgain" style="position:absolute;top:231px;left:256px;color:red;visibility:hidden" onclick="callRestApi()">Try Again</a>
-               <img id="img2" src="https://wwwdemofintechcom.000webhostapp.com/undefined" style="width: 365px;height: 205px;">
+			   <button id="resendApiButton" onclick="callRestApi()" type="button" class="btn btn-warning" style="visibility:visible;position:absolute;left: 110px;top: 204px;background-color: white;color:#0b0860;font-weight:bold">Press to verify</button>
+			   <a href="#" id="tryAgain" style="position:absolute;top:218px;left:256px;color:red;visibility:hidden" onclick="callRestApi()">Try Again</a>
             </div>
+			<div id="divVerifyIc" style="border: 4px solid;width: 365px;height: 205px;position: absolute;left: 1088px;top: 269px;border-color: white;">
             <img id="bar" src="bar.png" style="height: 30px;width: 1402px;position: absolute;top: 476px;left:55px;">
             <div id="divChecking" style="width: 402px;height:184px;background: white;position: absolute;top: 508px;">
                 <label style="font-weight: bold;position: absolute;left: 10px;top: 10px;font-size:25px;">Verification:</label>

@@ -240,8 +240,8 @@ function localDescCreated(desc) {
 
 function callRestApi() {
     console.log("call rest Api");
-	resendApiButton.setAttribute("style","visibility:hidden;position:absolute;left: 110px;top: 224px;background-color: white;color:#0b0860;font-weight:bold");
-	tryAgain.setAttribute("style","position:absolute;top:231px;left:256px;color:red;visibility:hidden");
+	resendApiButton.setAttribute("style","visibility:hidden;position:absolute;left: 110px;top: 204px;background-color: white;color:#0b0860;font-weight:bold");
+	tryAgain.setAttribute("style","position:absolute;top:206px;left:256px;color:red;visibility:hidden");
 	verify.setAttribute("style","position: absolute;top: 111px;left: 138px;font-size: 14;font-weight: 550; visibility:visible;");
 	var test =  document.getElementById("fromServer");
 	var canvas = document.getElementById("myCanvas");
@@ -278,9 +278,9 @@ function callRestApi() {
                 //document.getElementById('percent').innerHTML = '<font color="green">' + x + '%</font>';
                 //document.getElementById('verify').innerHTML = '<font color="green">VERIFIED</font>';
 				document.getElementById('resendApiButton').innerHTML = x + "%  VERIFIED";
-				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 224px;background-color: white;color:#0b0860;font-weight:bold");
+				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 204px;background-color: white;color:#0b0860;font-weight:bold");
 				imgUsed.src = imgToBeSet;
-				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 0px;top: -4px;width: 365px;height: 266px;");
+				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 0px;top: 0px;width: 365px;height: 240px;");
 				//percent.setAttribute("style","position: absolute;top: 78px;left: 257px;");
 				//verify.setAttribute("style","position: absolute;top: 118px;left: 251px;");
 				verify.setAttribute("style","position: absolute;top: 111px;left: 138px;font-size: 14;font-weight: 550; visibility:hidden;");
@@ -298,10 +298,10 @@ function callRestApi() {
 					document.getElementById('resendApiButton').innerHTML = x + "%  FAILED"
 				}
 				//document.getElementById('resendApiButton').innerHTML = x + "%  FAILED"
-				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 224px;background-color: white;color:#0b0860;font-weight:bold");
-				tryAgain.setAttribute("style","position:absolute;top:231px;left:256px;color:red;visibility:visible");
+				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 204px;background-color: white;color:#0b0860;font-weight:bold");
+				tryAgain.setAttribute("style","position:absolute;top:206px;left:256px;color:red;visibility:visible");
 				imgUsed.src = imgToBeSet;
-				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 0px;top: -4px;width: 365px;height: 266px;");
+				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 0px;top: 0px;width: 365px;height: 240px;");
 				//resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 236px;top: 189px;background-color: white;color:#0b0860;font-weight:bold;");
 				//percent.setAttribute("style","position: absolute;top: 78px;left: 260px;font-size: 32px;font-weight: 550;");
 				//verify.setAttribute("style","position: absolute;top: 125px;left: 264px;font-size: 14;font-weight: 550;");
