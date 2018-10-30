@@ -123,7 +123,7 @@ function startWebRTC(isOfferer) {
             localVideo.setAttribute("style", "display: none;");
             //setTimeout(callRestApi, 5000);
             if (!isOfferer) {
-                canvasOutput.setAttribute("style", "display:;position:absolute;top:1px;left:55px;width:1019px;height:479px;");
+                canvasOutput.setAttribute("style", "display:;position:absolute;top:1px;left:55px;width:958px;height:479px;");
             } else {
                 canvasOutput.setAttribute("style", "display: none;");
                 img1.setAttribute("style", "display: none;");
@@ -157,7 +157,7 @@ divVerify.setAttribute("style","display: none;");
         } else {
             localVideo.setAttribute("style", "display: none;");
             if (!isOfferer) {
-                canvasOutput.setAttribute("style", "display:;position:absolute;top:1px;left:55px;width:1019px;height:479px;");
+                canvasOutput.setAttribute("style", "display:;position:absolute;top:1px;left:55px;width:958px;height:479px;");
             } else {
                 canvasOutput.setAttribute("style", "display: none;");
                 img1.setAttribute("style", "display: none;");
@@ -280,7 +280,7 @@ function callRestApi() {
 				document.getElementById('resendApiButton').innerHTML = x + "%  VERIFIED";
 				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 204px;background-color: white;color:#0b0860;font-weight:bold");
 				imgUsed.src = imgToBeSet;
-				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 0px;top: 0px;width: 365px;height: 240px;");
+				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 0px;top: 0px;width: 418px;height: 240px;border-radius:10px;");
 				//percent.setAttribute("style","position: absolute;top: 78px;left: 257px;");
 				//verify.setAttribute("style","position: absolute;top: 118px;left: 251px;");
 				verify.setAttribute("style","position: absolute;top: 111px;left: 138px;font-size: 14;font-weight: 550; visibility:hidden;");
@@ -301,7 +301,7 @@ function callRestApi() {
 				resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 110px;top: 204px;background-color: white;color:#0b0860;font-weight:bold");
 				tryAgain.setAttribute("style","position:absolute;top:206px;left:256px;color:red;visibility:visible");
 				imgUsed.src = imgToBeSet;
-				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 0px;top: 0px;width: 365px;height: 240px;");
+				imgUsed.setAttribute("style", "visibility: visible;position: absolute;left: 0px;top: 0px;width: 418px;height: 240px;border-radius:10px;");
 				//resendApiButton.setAttribute("style","visibility:visible;position:absolute;left: 236px;top: 189px;background-color: white;color:#0b0860;font-weight:bold;");
 				//percent.setAttribute("style","position: absolute;top: 78px;left: 260px;font-size: 32px;font-weight: 550;");
 				//verify.setAttribute("style","position: absolute;top: 125px;left: 264px;font-size: 14;font-weight: 550;");

@@ -25,7 +25,7 @@
         
         .btn {
             display: inline-block;
-            padding: 6px 12px;
+            padding: 2px 8px;
             margin-bottom: 0;
             font-size: 14px;
             font-weight: 400;
@@ -53,25 +53,25 @@
             <p class="err" id="errorMessage" style="display: none;"></p>
             <textarea class="code" rows="29" cols="80" id="codeEditor" spellcheck="false" style="display: none;"></textarea>
             <video id="localVideo" autoplay="" muted="" style="visibility:hidden ;width:320; height:308;"></video>
-            <video id="remoteVideo" autoplay="" muted="" width="300" height="300" style="position: absolute;left: 55px;top: 13px; width:1019px; height:465px;"></video>
+            <video id="remoteVideo" autoplay="" muted="" width="300" height="300" style="position: absolute;left: 55px;top: 13px; width:958px; height:465px;"></video>
             <canvas id="canvasOutput" style="border:1px solid; display: none;"></canvas>
             <canvas id="canvasOutputLocal" width="320" height="308" style="border:1px solid; display: none;"></canvas>
             <canvas id="canvasIc" width="320" height="308" style="border:1px solid; display:none;"></canvas>
-            <div id="divVerify" style="border: 4px solid;width: 365px;height: 240px;position: absolute;left: 1088px;top: 3px;border-color: white;">
+            <div id="divVerify" style="border: 1px solid;width: 418px;height: 240px;position: absolute;left: 1034px;top: 3px;border-color: white;border-radius:10px">
                <div style="height: 265px;">
-                  <img id="img1" src="facial.gif" style="border:1px solid;width: 184px;height: 236px;position:absolute;left:85px;top:0px;"> 
+                  <img id="img1" src="facial.gif" style="border:1px solid;width: 184px;height: 236px;position:absolute;left:120px;top:0px;"> 
 					<img id="imgUsed" src="face-ic.png" style="visibility: hidden;position: absolute;left: 0px;top: 0px;width: 365px;height: 240px;">
                      <label id="percent" style="position: absolute;top: 78px;left: 260px;"><font color="white"></font></label>
                      <label id="verify" style="position: absolute;top: 159px;left: 241px;font-size: 14;font-weight: 550;visibility:hidden;"><font color="white">VERIFYING</font></label>
                </div>
-			   <button id="resendApiButton" onclick="callRestApi()" type="button" class="btn btn-warning" style="visibility:visible;position:absolute;left: 110px;top: 204px;background-color: white;color:#0b0860;font-weight:bold">Press to verify</button>
+			   <button id="resendApiButton" onclick="callRestApi()" type="button" class="btn btn-warning" style="visibility:visible;position:absolute;left: 151px;top: 204px;background-color: white;color:#0b0860;font-weight:bold">Press to verify</button>
 			   <a href="#" id="tryAgain" style="position:absolute;top:218px;left:256px;color:red;visibility:hidden" onclick="callRestApi()">Try Again</a>
             </div>
-			<div id="divVerifyIc" style="border: 4px solid;width: 365px;height: 205px;position: absolute;left: 1088px;top: 269px;border-color: white;">
-			<img id="img2" src="https://wwwdemofintechcom.000webhostapp.com/undefined" style="width: 365px;height: 205px;">
+			<div id="divVerifyIc" style="border: 1px solid;width: 418px;height: 205px;position: absolute;left: 1034px;top: 269px;border-color: white;border-radius:10px">
+			<img id="img2" src="https://wwwdemofintechcom.000webhostapp.com/undefined" style="width: 418px;height: 205px;">
 			</div>
-            <img id="bar" src="bar.png" style="height: 30px;width: 1402px;position: absolute;top: 476px;left:55px;">
-            <div id="divChecking" style="width: 402px;height:184px;background: white;position: absolute;top: 508px;">
+            <img id="bar" src="bar.png" style="height: 30px;width: 1402px;position: absolute;top: 485px;left:55px;">
+            <div id="divChecking" style="width: 402px;height:166px;background: white;position: absolute;top: 525px;">
                 <label style="font-weight: bold;position: absolute;left: 10px;top: 10px;font-size:25px;">Verification:</label>
                 <br>
                 <br> <label style="position: absolute;left: 10px;top: 49px;font-size:20px;font-weight:bold;"> 1. AML Check Result - </label><b><i><font color="green" style="position: absolute;left: 225px;top: 49px;font-size:20px;">PASS</font></i></b>
@@ -84,12 +84,12 @@
                 <img src="doc.png" style="width: 33px;height: 30px;position: absolute;top: 129px;left: 354px;">
                 <br>
             </div>
-            <button id="approve" type="button" class="btn btn-warning" style="position: absolute;top: 543px;left: 1147px;width: 300;height: 50;background-color: #0000c2;font-size:25px;font-weight:bold;">Approve</button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button id="reject" type="button" class="btn btn-warning" style="position: absolute;top: 612px;left: 1147px;height: 50;width:300;background-color: #0000c2;font-size:25px;font-weight:bold;">Reject</button>
-            <div id="kycInfo" style="position: absolute;top: 509px;left: 458px;">
-                <div style="height: 183px;background: white;width: 657px;">
+            <button id="approve" type="button" class="btn btn-warning" style="position: absolute;top: 522px;left: 1147px;width: 300;height: 70;background-color: #0000c2;font-size:25px;font-weight:bold;">Approve</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="reject" type="button" class="btn btn-warning" style="position: absolute;top: 621px;left: 1147px;height: 70;width:300;background-color: #0000c2;font-size:25px;font-weight:bold;">Reject</button>
+            <div id="kycInfo" style="position: absolute;top: 525px;left: 458px;">
+                <div style="height: 166px;background: white;width: 657px;">
 					<label style="color: black;font-size: 25;font-weight: 100;">Remarks:</label>
-					<textarea style="position: absolute;top: 29px;left: 1.2;width: 651px;height: 147px;"></textarea>
+					<textarea style="position: absolute;top: 29px;left: 1.5;width: 651px;height: 137px;"></textarea>
                 </div>
             </div>
             <img id="imageIdCardData" src="face-ic.png" style="display: none;">
