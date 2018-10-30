@@ -112,13 +112,11 @@
          
          // load pre-trained classifiers
          let check = classifier.load('\haarcascade_frontalface_default.xml');
-         console.log("check:"+check);
          
          const FPS = 30;
          function processVideo() {
              try {
                  if (!streaming) {
-                     console.log("if not streaming");
                      // clean and stop.
                      src.delete();
                      dst.delete();
@@ -183,11 +181,6 @@
                 var canvas = document.getElementById('canvasIc');
                 var context = canvas.getContext('2d');
                 var w, h, ratio;
-                if (video.playing){
-                    console.log("remote video playing");
-                }else{
-                    console.log("remote video not playing");
-                }
                 video.addEventListener('play', function() {
                     ratio = video.videoWidth / video.videoHeight;
                     w = video.videoWidth - 100;
