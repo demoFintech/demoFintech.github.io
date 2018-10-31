@@ -47,13 +47,15 @@
     </style>
 </head>
 
-<body id="body" style="position: absolute;top: 17px;left: -29px;margin: 0;align-items: center;justify-content: center;padding: 0 50px;font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+<body id="body" style="position: absolute;top: 28px;left: -29px;margin: 0;align-items: center;justify-content: center;padding: 0 50px;font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+<img id="bar" src="bar.png" style="height: 30px;width: 1402px;position: absolute;top: -26px;left:55px;">
+<div>
     <div style="margin: 0 auto;">
         <div>
             <p class="err" id="errorMessage" style="display: none;"></p>
             <textarea class="code" rows="29" cols="80" id="codeEditor" spellcheck="false" style="display: none;"></textarea>
             <video id="localVideo" autoplay="" muted="" style="visibility:hidden ;width:320; height:308;"></video>
-            <video id="remoteVideo" autoplay="" muted="" width="300" height="300" style="position: absolute;left: 55px;top: 13px; width:958px; height:465px;"></video>
+            <video id="remoteVideo" autoplay="" muted="" width="300" height="300" style="position: absolute;left: 55px;top: 19px;width: 947px;height: 478px;"></video>
             <canvas id="canvasOutput" style="border:1px solid; display: none;"></canvas>
             <canvas id="canvasOutputLocal" width="320" height="308" style="border:1px solid; display: none;"></canvas>
             <canvas id="canvasIc" width="320" height="308" style="border:1px solid; display:none;"></canvas>
@@ -67,29 +69,34 @@
 			   <button id="resendApiButton" onclick="callRestApi()" type="button" class="btn btn-warning" style="visibility:visible;position:absolute;left: 151px;top: 204px;background-color: white;color:#0b0860;font-weight:bold">Press to verify</button>
 			   <a href="#" id="tryAgain" style="position:absolute;top:218px;left:256px;color:red;visibility:hidden" onclick="callRestApi()">Try Again</a>
             </div>
-			<div id="divVerifyIc" style="border: 1px solid;width: 418px;height: 205px;position: absolute;left: 1034px;top: 269px;border-color: white;border-radius:10px">
-			<img id="img2" src="https://wwwdemofintechcom.000webhostapp.com/undefined" style="width: 418px;height: 205px;">
+			<div id="divVerifyIc" style="border: 1px solid;width: 418px;height: 225px;position: absolute;left: 1034px;top: 269px;border-color: white;border-radius:10px">
+			<img id="img2" src="https://wwwdemofintechcom.000webhostapp.com/undefined" style="width: 418px;height: 224px;">
 			</div>
-            <img id="bar" src="bar.png" style="height: 30px;width: 1402px;position: absolute;top: 485px;left:55px;">
-            <div id="divChecking" style="width: 402px;height:166px;background: white;position: absolute;top: 525px;">
+            <img id="bar" src="bar.png" style="height: 47px;width: 1402px;position: absolute;top: 489px;left:55px;">
+            <div id="divChecking" style="width: 402px;height: 240px;background: white;position: absolute;top: 533px;border-radius: 10px;">
                 <label style="font-weight: bold;position: absolute;left: 10px;top: 10px;font-size:25px;">Verification:</label>
                 <br>
-                <br> <label style="position: absolute;left: 10px;top: 49px;font-size:20px;font-weight:bold;"> 1. AML Check Result - </label><b><i><font color="green" style="position: absolute;left: 225px;top: 49px;font-size:20px;">PASS</font></i></b>
+                <br> <label style="position: absolute;left: 10px;top: 49px;font-size: 17px;font-weight:bold;word-break: break-word;width: 350px;"> 1. Anti Money Laundering Status Check - </label><br>
+				<b><i><font color="green" style="position: absolute;left: 94px;top: 72px;font-size:20px;">PASS</font></i></b>
                 <img src="doc.png" style="width: 33px;height: 30px;position: absolute;top: 45px;left: 354px;">
                 <br>
-                <br><br> <label style="position: absolute;left: 10px;font-size:20px;font-weight:bold;"> 2. Internal Blacklist - </label><b><i><font color="green" style="position: absolute;left: 213px;font-size:20px;">PASS</font></i></b>
-                <img src="doc.png" style="width: 33px;height: 30px;position: absolute;top: 84px;left: 354px;">
+                <br><br> <label style="position: absolute;left: 10px;font-size: 17px;font-weight:bold;">2. Individual Blacklist Records - </label>
+                            <b><i><font color="green" style="position: absolute;left: 276px;height: 72px;font-size:20px;">PASS</font></i></b><br>
+                <img src="doc.png" style="width: 33px;height: 30px;position: absolute;top: 105px;left: 354px;">
                 <br>
-                <br> <br><label style="position: absolute;left: 10px;top: 131px;font-size:20px;font-weight:bold;"> 3. CTOS - </label><b><i><font color="green" style="position: absolute;left: 117px;top: 132px;font-size:20px;">PASS</font></i></b>
-                <img src="doc.png" style="width: 33px;height: 30px;position: absolute;top: 129px;left: 354px;">
+                <br> <br><br><label style="position: absolute;left: 10px;top: 153px;font-size: 17px;font-weight:bold;"> 3. Individual CTOS Statistic - </label><b><i><font color="green" style="position: absolute;left: 258px;top: 152px;font-size:20px;">PASS</font></i></b>
+                <img src="doc.png" style="width: 33px;height: 28px;position: absolute;top: 150px;left: 354px;">
                 <br>
+                <br>
+                <label style="position: absolute;left: 10px;top: 191px;font-size: 17px;font-weight:bold;"> 4. Insolvency History Records  - </label><b><i><font color="green" style="position: absolute;left: 275px;top: 192px;font-size:20px;">PASS</font></i></b>
+                <img src="doc.png" style="width: 33px;height: 30px;position: absolute;top: 191px;left: 354px;">
             </div>
-            <button id="approve" type="button" class="btn btn-warning" style="position: absolute;top: 522px;left: 1147px;width: 300;height: 70;background-color: #0000c2;font-size:25px;font-weight:bold;">Approve</button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button id="reject" type="button" class="btn btn-warning" style="position: absolute;top: 621px;left: 1147px;height: 70;width:300;background-color: #0000c2;font-size:25px;font-weight:bold;">Reject</button>
-            <div id="kycInfo" style="position: absolute;top: 525px;left: 458px;">
-                <div style="height: 166px;background: white;width: 657px;">
-					<label style="color: black;font-size: 25;font-weight: 100;">Remarks:</label>
-					<textarea style="position: absolute;top: 29px;left: 1.5;width: 651px;height: 137px;"></textarea>
+            <button id="approve" type="button" class="btn btn-warning" style="position: absolute;top: 590px;left: 1147px;width: 300;height: 60;background-color: #767171;font-size: 30px;font-weight:bold;border-radius: 10px;">Approve</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="reject" type="button" class="btn btn-warning" style="position: absolute;top: 660px;left: 1147px;height: 60px;width:300;background-color: #767171;font-size: 30px;font-weight:bold;border-radius: 10px;">Reject</button>
+            <div id="kycInfo" style="position: absolute;top: 530px;left: 458px;">
+                <div style="height: 242px;top: 562px;background: white;width: 657px;border-radius: 10px;margin-left: 10px;">
+					<label style="color: black;font-size: 25;font-weight: bold;top: 6px;left: 5px;padding: 10px 10px 10px;position: relative;">Remarks:</label>
+					<textarea style="position: absolute;top: 34px;left: 12.5px;width: 651px;height: 201px;border-color: white;"></textarea>
                 </div>
             </div>
             <img id="imageIdCardData" src="face-ic.png" style="display: none;">
@@ -100,6 +107,7 @@
 			<img src="hangup.png" style="width:40px"></button>
         </div>
     </div>
+	</div>
     <script src="script.js"></script>
     <script src="https://webrtc.github.io/adapter/adapter-5.0.4.js" type="text/javascript"></script>
     <script src="utils.js" type="text/javascript"></script>
