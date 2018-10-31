@@ -123,7 +123,7 @@ function startWebRTC(isOfferer) {
             localVideo.setAttribute("style", "display: none;");
             //setTimeout(callRestApi, 5000);
             if (!isOfferer) {
-                canvasOutput.setAttribute("style", "display:;position:absolute;top:1px;left:55px;width:958px;height:479px;");
+                canvasOutput.setAttribute("style", "display:;position:absolute;top:4px;left:55px;width:947px;height:494px;");
             } else {
                 canvasOutput.setAttribute("style", "display: none;");
                 img1.setAttribute("style", "display: none;");
@@ -157,7 +157,7 @@ divVerify.setAttribute("style","display: none;");
         } else {
             localVideo.setAttribute("style", "display: none;");
             if (!isOfferer) {
-                canvasOutput.setAttribute("style", "display:;position:absolute;top:1px;left:55px;width:958px;height:479px;");
+                canvasOutput.setAttribute("style", "display:;position:absolute;top:4px;left:55px;width:947px;height:494px;");
             } else {
                 canvasOutput.setAttribute("style", "display: none;");
                 img1.setAttribute("style", "display: none;");
