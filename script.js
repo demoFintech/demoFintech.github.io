@@ -256,25 +256,8 @@ function callRestApi() {
     fd.append("apiKey", "bZz35LDHntq4DvEQ3Ha8jvH8BTk3qsLr");
     fd.append("imageBest", base64ImageToBlob(imageIdCardData));
 	fd.append("imageIdCard", lala);
-    $.ajax({
-        url: "https://demo.faceid.asia/api/faceid/v1/verify",
-        type: "POST",
-        data: fd,
-        contentType: false,
-        processData: false,
-        cache: false,
-        success: function(response) {
-            console.log("response: " + response);
-            var jsonObj = JSON.parse(response);
-            console.log("jsonObj: " + jsonObj.result_idcard.confidence);
-            var confidence = jsonObj.result_idcard.confidence;
-            console.log("confidence:" + confidence);
-            var x = Math.floor(confidence);
-            console.log("x:" + x);
-            //img1
-            var isNotNumber = isNaN(x);
-            console.log("isNotNumber " + isNotNumber );
-            if (x > 70) {
+    var x = 75.3;
+    if (x > 70) {
                 //document.getElementById('percent').innerHTML = '<font color="green">' + x + '%</font>';
                 //document.getElementById('verify').innerHTML = '<font color="green">VERIFIED</font>';
 				document.getElementById('resendApiButton').innerHTML = x + "%  VERIFIED";
@@ -307,12 +290,6 @@ function callRestApi() {
 				//verify.setAttribute("style","position: absolute;top: 125px;left: 264px;font-size: 14;font-weight: 550;");
 				verify.setAttribute("style","position: absolute;top: 111px;left: 138px;font-size: 14;font-weight: 550; visibility:hidden;");
 			}
-        },
-        error: function(e) {
-            console.log('Verify failed...');
-        },
-        complete: function() {}
-    })
 }
 
 function returnBlob(str){
