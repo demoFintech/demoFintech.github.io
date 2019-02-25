@@ -256,7 +256,17 @@ function callRestApi() {
     fd.append("apiKey", "bZz35LDHntq4DvEQ3Ha8jvH8BTk3qsLr");
     fd.append("imageBest", base64ImageToBlob(imageIdCardData));
 	fd.append("imageIdCard", lala);
-    var x = 75.3;
+    //var x = 75.3;
+	var a = 0;
+	a += 1;
+	
+	var x = 0;
+	
+	if(a == 1){
+		x = 25.43;
+	}else{
+		x = 73.87;
+	}
     if (x > 70) {
                 //document.getElementById('percent').innerHTML = '<font color="green">' + x + '%</font>';
                 //document.getElementById('verify').innerHTML = '<font color="green">VERIFIED</font>';
